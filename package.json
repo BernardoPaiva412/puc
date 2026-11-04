@@ -1,14 +1,24 @@
 {
   "devDependencies": {
-    "concurrently": "^10.0.6",
-    "prisma": "^8.0.0-rc.28"
-  },
-  "dependencies": {
-    "@prisma/client": "^7.10.1"
+    "@types/node": "^26.6.6",
+    "concurrently": "^10.0.6"
   },
   "scripts": {
-    "client-run": "dev --prefix client",
-    "server-run": "dev --prefix server",
-    "dev": "concurrently \"npm run client-run\" \"npm run server-run\""
+    "generate": "npm run generate -w @puc/storage",
+    "migrate": "npm run migrate -w @puc/storage",
+    "client-dev": "npm run dev -w client",
+    "server-dev": "npm run dev -w server",
+    "dev": "concurrently \" npm run client-dev\" \"npm run server-dev\""
+  },
+  "name": "puc",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "overrides": {
+    "minimatch": "^11.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9"
   }
 }
