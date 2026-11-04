@@ -1,7 +1,7 @@
 generator client {
     provider = "prisma-client-js"
 
-    output   = "../src/generated/client"
+    output = "../src/generated/client"
 }
 
 datasource db {
@@ -9,11 +9,23 @@ datasource db {
 }
 
 model Card {
-    id    Int     @id     @default(autoincrement())
-    email String  @unique
-    name  String?
+    id           Int      @id @default(autoincrement())
+    username     String   @unique
+    name         String
+    passwordHash String
+    country      String
+    email        String?
+    number       String?
+    createdAt    DateTime @default(now())
+    updatedAt    DateTime @updatedAt
+    birthdate    DateTime
+    column       Tastes[]
 }
 
-model Preference {
-    id Int @id
+model Tastes {
+    id        Int     @id @default(autoincrement())
+    title     String
+    isPrivate Boolean
+    value     String
+    card      Card[]
 }
