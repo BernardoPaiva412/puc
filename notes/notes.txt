@@ -1,0 +1,17 @@
+cinematicWork
+televisionWork
+literaryWork
+comicBook
+videoGame
+playedSport
+watchedSport
+supporting
+musicalGenre
+musicalArtist
+instrument
+personality
+dreamProfession
+food
+color
+religion
+dreamCountry
