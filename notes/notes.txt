@@ -15,3 +15,8 @@ food
 color
 religion
 dreamCountry
+birthdate
+number
+email
+country
+name

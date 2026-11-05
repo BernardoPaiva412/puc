@@ -8,7 +8,7 @@
     "migrate": "npm run migrate -w @puc/storage",
     "client-dev": "npm run dev -w client",
     "server-dev": "npm run dev -w server",
-    "dev": "concurrently \" npm run client-dev\" \"npm run server-dev\""
+    "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\""
   },
   "name": "puc",
   "workspaces": [
