@@ -1,11 +1,11 @@
 {
-  "name": "server",
+  "name": "@puc/server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": ""
+    "dev": "npx tsx watch --env-file=../../.env src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.6",
     "ts-node-dev": "^2.0.0",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }
 }

@@ -19,10 +19,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
  */
 export type Card = $Result.DefaultSelection<Prisma.$CardPayload>
 /**
- * Model Tastes
+ * Model Taste
  * 
  */
-export type Tastes = $Result.DefaultSelection<Prisma.$TastesPayload>
+export type Taste = $Result.DefaultSelection<Prisma.$TastePayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -156,14 +156,14 @@ export class PrismaClient<
   get card(): Prisma.CardDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.tastes`: Exposes CRUD operations for the **Tastes** model.
+   * `prisma.taste`: Exposes CRUD operations for the **Taste** model.
     * Example usage:
     * ```ts
     * // Fetch zero or more Tastes
-    * const tastes = await prisma.tastes.findMany()
+    * const tastes = await prisma.taste.findMany()
     * ```
     */
-  get tastes(): Prisma.TastesDelegate<ExtArgs, ClientOptions>;
+  get taste(): Prisma.TasteDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -612,7 +612,7 @@ export namespace Prisma {
 
   export const ModelName: {
     Card: 'Card',
-    Tastes: 'Tastes'
+    Taste: 'Taste'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -628,7 +628,7 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "card" | "tastes"
+      modelProps: "card" | "taste"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
@@ -706,77 +706,77 @@ export namespace Prisma {
           }
         }
       }
-      Tastes: {
-        payload: Prisma.$TastesPayload<ExtArgs>
-        fields: Prisma.TastesFieldRefs
+      Taste: {
+        payload: Prisma.$TastePayload<ExtArgs>
+        fields: Prisma.TasteFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.TastesFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload> | null
+            args: Prisma.TasteFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.TastesFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>
+            args: Prisma.TasteFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>
           }
           findFirst: {
-            args: Prisma.TastesFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload> | null
+            args: Prisma.TasteFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.TastesFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>
+            args: Prisma.TasteFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>
           }
           findMany: {
-            args: Prisma.TastesFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>[]
+            args: Prisma.TasteFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>[]
           }
           create: {
-            args: Prisma.TastesCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>
+            args: Prisma.TasteCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>
           }
           createMany: {
-            args: Prisma.TastesCreateManyArgs<ExtArgs>
+            args: Prisma.TasteCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.TastesCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>[]
+            args: Prisma.TasteCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>[]
           }
           delete: {
-            args: Prisma.TastesDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>
+            args: Prisma.TasteDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>
           }
           update: {
-            args: Prisma.TastesUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>
+            args: Prisma.TasteUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>
           }
           deleteMany: {
-            args: Prisma.TastesDeleteManyArgs<ExtArgs>
+            args: Prisma.TasteDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.TastesUpdateManyArgs<ExtArgs>
+            args: Prisma.TasteUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.TastesUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>[]
+            args: Prisma.TasteUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>[]
           }
           upsert: {
-            args: Prisma.TastesUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$TastesPayload>
+            args: Prisma.TasteUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TastePayload>
           }
           aggregate: {
-            args: Prisma.TastesAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateTastes>
+            args: Prisma.TasteAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTaste>
           }
           groupBy: {
-            args: Prisma.TastesGroupByArgs<ExtArgs>
-            result: $Utils.Optional<TastesGroupByOutputType>[]
+            args: Prisma.TasteGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TasteGroupByOutputType>[]
           }
           count: {
-            args: Prisma.TastesCountArgs<ExtArgs>
-            result: $Utils.Optional<TastesCountAggregateOutputType> | number
+            args: Prisma.TasteCountArgs<ExtArgs>
+            result: $Utils.Optional<TasteCountAggregateOutputType> | number
           }
         }
       }
@@ -904,7 +904,7 @@ export namespace Prisma {
   }
   export type GlobalOmitConfig = {
     card?: CardOmit
-    tastes?: TastesOmit
+    taste?: TasteOmit
   }
 
   /* Types for Logging */
@@ -985,11 +985,11 @@ export namespace Prisma {
    */
 
   export type CardCountOutputType = {
-    column: number
+    tastes: number
   }
 
   export type CardCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    column?: boolean | CardCountOutputTypeCountColumnArgs
+    tastes?: boolean | CardCountOutputTypeCountTastesArgs
   }
 
   // Custom InputTypes
@@ -1006,39 +1006,8 @@ export namespace Prisma {
   /**
    * CardCountOutputType without action
    */
-  export type CardCountOutputTypeCountColumnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: TastesWhereInput
-  }
-
-
-  /**
-   * Count Type TastesCountOutputType
-   */
-
-  export type TastesCountOutputType = {
-    card: number
-  }
-
-  export type TastesCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    card?: boolean | TastesCountOutputTypeCountCardArgs
-  }
-
-  // Custom InputTypes
-  /**
-   * TastesCountOutputType without action
-   */
-  export type TastesCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the TastesCountOutputType
-     */
-    select?: TastesCountOutputTypeSelect<ExtArgs> | null
-  }
-
-  /**
-   * TastesCountOutputType without action
-   */
-  export type TastesCountOutputTypeCountCardArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: CardWhereInput
+  export type CardCountOutputTypeCountTastesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TasteWhereInput
   }
 
 
@@ -1069,40 +1038,25 @@ export namespace Prisma {
   export type CardMinAggregateOutputType = {
     id: number | null
     username: string | null
-    name: string | null
     password: string | null
-    country: string | null
-    email: string | null
-    number: string | null
     createdAt: Date | null
     updatedAt: Date | null
-    birthdate: Date | null
   }
 
   export type CardMaxAggregateOutputType = {
     id: number | null
     username: string | null
-    name: string | null
     password: string | null
-    country: string | null
-    email: string | null
-    number: string | null
     createdAt: Date | null
     updatedAt: Date | null
-    birthdate: Date | null
   }
 
   export type CardCountAggregateOutputType = {
     id: number
     username: number
-    name: number
     password: number
-    country: number
-    email: number
-    number: number
     createdAt: number
     updatedAt: number
-    birthdate: number
     _all: number
   }
 
@@ -1118,40 +1072,25 @@ export namespace Prisma {
   export type CardMinAggregateInputType = {
     id?: true
     username?: true
-    name?: true
     password?: true
-    country?: true
-    email?: true
-    number?: true
     createdAt?: true
     updatedAt?: true
-    birthdate?: true
   }
 
   export type CardMaxAggregateInputType = {
     id?: true
     username?: true
-    name?: true
     password?: true
-    country?: true
-    email?: true
-    number?: true
     createdAt?: true
     updatedAt?: true
-    birthdate?: true
   }
 
   export type CardCountAggregateInputType = {
     id?: true
     username?: true
-    name?: true
     password?: true
-    country?: true
-    email?: true
-    number?: true
     createdAt?: true
     updatedAt?: true
-    birthdate?: true
     _all?: true
   }
 
@@ -1244,14 +1183,9 @@ export namespace Prisma {
   export type CardGroupByOutputType = {
     id: number
     username: string
-    name: string | null
     password: string
-    country: string | null
-    email: string | null
-    number: string | null
     createdAt: Date
     updatedAt: Date
-    birthdate: Date | null
     _count: CardCountAggregateOutputType | null
     _avg: CardAvgAggregateOutputType | null
     _sum: CardSumAggregateOutputType | null
@@ -1276,60 +1210,40 @@ export namespace Prisma {
   export type CardSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    name?: boolean
     password?: boolean
-    country?: boolean
-    email?: boolean
-    number?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    birthdate?: boolean
-    column?: boolean | Card$columnArgs<ExtArgs>
+    tastes?: boolean | Card$tastesArgs<ExtArgs>
     _count?: boolean | CardCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["card"]>
 
   export type CardSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    name?: boolean
     password?: boolean
-    country?: boolean
-    email?: boolean
-    number?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    birthdate?: boolean
   }, ExtArgs["result"]["card"]>
 
   export type CardSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
-    name?: boolean
     password?: boolean
-    country?: boolean
-    email?: boolean
-    number?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    birthdate?: boolean
   }, ExtArgs["result"]["card"]>
 
   export type CardSelectScalar = {
     id?: boolean
     username?: boolean
-    name?: boolean
     password?: boolean
-    country?: boolean
-    email?: boolean
-    number?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    birthdate?: boolean
   }
 
-  export type CardOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "name" | "password" | "country" | "email" | "number" | "createdAt" | "updatedAt" | "birthdate", ExtArgs["result"]["card"]>
+  export type CardOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "createdAt" | "updatedAt", ExtArgs["result"]["card"]>
   export type CardInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    column?: boolean | Card$columnArgs<ExtArgs>
+    tastes?: boolean | Card$tastesArgs<ExtArgs>
     _count?: boolean | CardCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type CardIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -1338,19 +1252,14 @@ export namespace Prisma {
   export type $CardPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Card"
     objects: {
-      column: Prisma.$TastesPayload<ExtArgs>[]
+      tastes: Prisma.$TastePayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       username: string
-      name: string | null
       password: string
-      country: string | null
-      email: string | null
-      number: string | null
       createdAt: Date
       updatedAt: Date
-      birthdate: Date | null
     }, ExtArgs["result"]["card"]>
     composites: {}
   }
@@ -1745,7 +1654,7 @@ export namespace Prisma {
    */
   export interface Prisma__CardClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    column<T extends Card$columnArgs<ExtArgs> = {}>(args?: Subset<T, Card$columnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    tastes<T extends Card$tastesArgs<ExtArgs> = {}>(args?: Subset<T, Card$tastesArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1777,14 +1686,9 @@ export namespace Prisma {
   interface CardFieldRefs {
     readonly id: FieldRef<"Card", 'Int'>
     readonly username: FieldRef<"Card", 'String'>
-    readonly name: FieldRef<"Card", 'String'>
     readonly password: FieldRef<"Card", 'String'>
-    readonly country: FieldRef<"Card", 'String'>
-    readonly email: FieldRef<"Card", 'String'>
-    readonly number: FieldRef<"Card", 'String'>
     readonly createdAt: FieldRef<"Card", 'DateTime'>
     readonly updatedAt: FieldRef<"Card", 'DateTime'>
-    readonly birthdate: FieldRef<"Card", 'DateTime'>
   }
     
 
@@ -2178,27 +2082,27 @@ export namespace Prisma {
   }
 
   /**
-   * Card.column
+   * Card.tastes
    */
-  export type Card$columnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Card$tastesArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
-    where?: TastesWhereInput
-    orderBy?: TastesOrderByWithRelationInput | TastesOrderByWithRelationInput[]
-    cursor?: TastesWhereUniqueInput
+    include?: TasteInclude<ExtArgs> | null
+    where?: TasteWhereInput
+    orderBy?: TasteOrderByWithRelationInput | TasteOrderByWithRelationInput[]
+    cursor?: TasteWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: TastesScalarFieldEnum | TastesScalarFieldEnum[]
+    distinct?: TasteScalarFieldEnum | TasteScalarFieldEnum[]
   }
 
   /**
@@ -2221,95 +2125,111 @@ export namespace Prisma {
 
 
   /**
-   * Model Tastes
+   * Model Taste
    */
 
-  export type AggregateTastes = {
-    _count: TastesCountAggregateOutputType | null
-    _avg: TastesAvgAggregateOutputType | null
-    _sum: TastesSumAggregateOutputType | null
-    _min: TastesMinAggregateOutputType | null
-    _max: TastesMaxAggregateOutputType | null
+  export type AggregateTaste = {
+    _count: TasteCountAggregateOutputType | null
+    _avg: TasteAvgAggregateOutputType | null
+    _sum: TasteSumAggregateOutputType | null
+    _min: TasteMinAggregateOutputType | null
+    _max: TasteMaxAggregateOutputType | null
   }
 
-  export type TastesAvgAggregateOutputType = {
+  export type TasteAvgAggregateOutputType = {
     id: number | null
+    cardId: number | null
   }
 
-  export type TastesSumAggregateOutputType = {
+  export type TasteSumAggregateOutputType = {
     id: number | null
+    cardId: number | null
   }
 
-  export type TastesMinAggregateOutputType = {
-    id: number | null
-    title: string | null
-    isPrivate: boolean | null
-    value: string | null
-  }
-
-  export type TastesMaxAggregateOutputType = {
+  export type TasteMinAggregateOutputType = {
     id: number | null
     title: string | null
+    isMandatory: boolean | null
     isPrivate: boolean | null
     value: string | null
+    cardId: number | null
   }
 
-  export type TastesCountAggregateOutputType = {
+  export type TasteMaxAggregateOutputType = {
+    id: number | null
+    title: string | null
+    isMandatory: boolean | null
+    isPrivate: boolean | null
+    value: string | null
+    cardId: number | null
+  }
+
+  export type TasteCountAggregateOutputType = {
     id: number
     title: number
+    isMandatory: number
     isPrivate: number
     value: number
+    cardId: number
     _all: number
   }
 
 
-  export type TastesAvgAggregateInputType = {
+  export type TasteAvgAggregateInputType = {
     id?: true
+    cardId?: true
   }
 
-  export type TastesSumAggregateInputType = {
+  export type TasteSumAggregateInputType = {
     id?: true
+    cardId?: true
   }
 
-  export type TastesMinAggregateInputType = {
+  export type TasteMinAggregateInputType = {
     id?: true
     title?: true
+    isMandatory?: true
     isPrivate?: true
     value?: true
+    cardId?: true
   }
 
-  export type TastesMaxAggregateInputType = {
+  export type TasteMaxAggregateInputType = {
     id?: true
     title?: true
+    isMandatory?: true
     isPrivate?: true
     value?: true
+    cardId?: true
   }
 
-  export type TastesCountAggregateInputType = {
+  export type TasteCountAggregateInputType = {
     id?: true
     title?: true
+    isMandatory?: true
     isPrivate?: true
     value?: true
+    cardId?: true
     _all?: true
   }
 
-  export type TastesAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Tastes to aggregate.
+     * Filter which Taste to aggregate.
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of Tastes to fetch.
      */
-    orderBy?: TastesOrderByWithRelationInput | TastesOrderByWithRelationInput[]
+    orderBy?: TasteOrderByWithRelationInput | TasteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: TastesWhereUniqueInput
+    cursor?: TasteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -2327,262 +2247,278 @@ export namespace Prisma {
      * 
      * Count returned Tastes
     **/
-    _count?: true | TastesCountAggregateInputType
+    _count?: true | TasteCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: TastesAvgAggregateInputType
+    _avg?: TasteAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: TastesSumAggregateInputType
+    _sum?: TasteSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: TastesMinAggregateInputType
+    _min?: TasteMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: TastesMaxAggregateInputType
+    _max?: TasteMaxAggregateInputType
   }
 
-  export type GetTastesAggregateType<T extends TastesAggregateArgs> = {
-        [P in keyof T & keyof AggregateTastes]: P extends '_count' | 'count'
+  export type GetTasteAggregateType<T extends TasteAggregateArgs> = {
+        [P in keyof T & keyof AggregateTaste]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateTastes[P]>
-      : GetScalarType<T[P], AggregateTastes[P]>
+        : GetScalarType<T[P], AggregateTaste[P]>
+      : GetScalarType<T[P], AggregateTaste[P]>
   }
 
 
 
 
-  export type TastesGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: TastesWhereInput
-    orderBy?: TastesOrderByWithAggregationInput | TastesOrderByWithAggregationInput[]
-    by: TastesScalarFieldEnum[] | TastesScalarFieldEnum
-    having?: TastesScalarWhereWithAggregatesInput
+  export type TasteGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TasteWhereInput
+    orderBy?: TasteOrderByWithAggregationInput | TasteOrderByWithAggregationInput[]
+    by: TasteScalarFieldEnum[] | TasteScalarFieldEnum
+    having?: TasteScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: TastesCountAggregateInputType | true
-    _avg?: TastesAvgAggregateInputType
-    _sum?: TastesSumAggregateInputType
-    _min?: TastesMinAggregateInputType
-    _max?: TastesMaxAggregateInputType
+    _count?: TasteCountAggregateInputType | true
+    _avg?: TasteAvgAggregateInputType
+    _sum?: TasteSumAggregateInputType
+    _min?: TasteMinAggregateInputType
+    _max?: TasteMaxAggregateInputType
   }
 
-  export type TastesGroupByOutputType = {
+  export type TasteGroupByOutputType = {
     id: number
     title: string
+    isMandatory: boolean
     isPrivate: boolean
     value: string
-    _count: TastesCountAggregateOutputType | null
-    _avg: TastesAvgAggregateOutputType | null
-    _sum: TastesSumAggregateOutputType | null
-    _min: TastesMinAggregateOutputType | null
-    _max: TastesMaxAggregateOutputType | null
+    cardId: number
+    _count: TasteCountAggregateOutputType | null
+    _avg: TasteAvgAggregateOutputType | null
+    _sum: TasteSumAggregateOutputType | null
+    _min: TasteMinAggregateOutputType | null
+    _max: TasteMaxAggregateOutputType | null
   }
 
-  type GetTastesGroupByPayload<T extends TastesGroupByArgs> = Prisma.PrismaPromise<
+  type GetTasteGroupByPayload<T extends TasteGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<TastesGroupByOutputType, T['by']> &
+      PickEnumerable<TasteGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof TastesGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TasteGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], TastesGroupByOutputType[P]>
-            : GetScalarType<T[P], TastesGroupByOutputType[P]>
+              : GetScalarType<T[P], TasteGroupByOutputType[P]>
+            : GetScalarType<T[P], TasteGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type TastesSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TasteSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
+    isMandatory?: boolean
     isPrivate?: boolean
     value?: boolean
-    card?: boolean | Tastes$cardArgs<ExtArgs>
-    _count?: boolean | TastesCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["tastes"]>
+    cardId?: boolean
+    card?: boolean | CardDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["taste"]>
 
-  export type TastesSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TasteSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
+    isMandatory?: boolean
     isPrivate?: boolean
     value?: boolean
-  }, ExtArgs["result"]["tastes"]>
+    cardId?: boolean
+    card?: boolean | CardDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["taste"]>
 
-  export type TastesSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TasteSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     title?: boolean
+    isMandatory?: boolean
     isPrivate?: boolean
     value?: boolean
-  }, ExtArgs["result"]["tastes"]>
+    cardId?: boolean
+    card?: boolean | CardDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["taste"]>
 
-  export type TastesSelectScalar = {
+  export type TasteSelectScalar = {
     id?: boolean
     title?: boolean
+    isMandatory?: boolean
     isPrivate?: boolean
     value?: boolean
+    cardId?: boolean
   }
 
-  export type TastesOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "isPrivate" | "value", ExtArgs["result"]["tastes"]>
-  export type TastesInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    card?: boolean | Tastes$cardArgs<ExtArgs>
-    _count?: boolean | TastesCountOutputTypeDefaultArgs<ExtArgs>
+  export type TasteOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "isMandatory" | "isPrivate" | "value" | "cardId", ExtArgs["result"]["taste"]>
+  export type TasteInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    card?: boolean | CardDefaultArgs<ExtArgs>
   }
-  export type TastesIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type TastesIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type TasteIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    card?: boolean | CardDefaultArgs<ExtArgs>
+  }
+  export type TasteIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    card?: boolean | CardDefaultArgs<ExtArgs>
+  }
 
-  export type $TastesPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Tastes"
+  export type $TastePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Taste"
     objects: {
-      card: Prisma.$CardPayload<ExtArgs>[]
+      card: Prisma.$CardPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       title: string
+      isMandatory: boolean
       isPrivate: boolean
       value: string
-    }, ExtArgs["result"]["tastes"]>
+      cardId: number
+    }, ExtArgs["result"]["taste"]>
     composites: {}
   }
 
-  type TastesGetPayload<S extends boolean | null | undefined | TastesDefaultArgs> = $Result.GetResult<Prisma.$TastesPayload, S>
+  type TasteGetPayload<S extends boolean | null | undefined | TasteDefaultArgs> = $Result.GetResult<Prisma.$TastePayload, S>
 
-  type TastesCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<TastesFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: TastesCountAggregateInputType | true
+  type TasteCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TasteFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TasteCountAggregateInputType | true
     }
 
-  export interface TastesDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Tastes'], meta: { name: 'Tastes' } }
+  export interface TasteDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Taste'], meta: { name: 'Taste' } }
     /**
-     * Find zero or one Tastes that matches the filter.
-     * @param {TastesFindUniqueArgs} args - Arguments to find a Tastes
+     * Find zero or one Taste that matches the filter.
+     * @param {TasteFindUniqueArgs} args - Arguments to find a Taste
      * @example
-     * // Get one Tastes
-     * const tastes = await prisma.tastes.findUnique({
+     * // Get one Taste
+     * const taste = await prisma.taste.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends TastesFindUniqueArgs>(args: SelectSubset<T, TastesFindUniqueArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends TasteFindUniqueArgs>(args: SelectSubset<T, TasteFindUniqueArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Tastes that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Taste that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {TastesFindUniqueOrThrowArgs} args - Arguments to find a Tastes
+     * @param {TasteFindUniqueOrThrowArgs} args - Arguments to find a Taste
      * @example
-     * // Get one Tastes
-     * const tastes = await prisma.tastes.findUniqueOrThrow({
+     * // Get one Taste
+     * const taste = await prisma.taste.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends TastesFindUniqueOrThrowArgs>(args: SelectSubset<T, TastesFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends TasteFindUniqueOrThrowArgs>(args: SelectSubset<T, TasteFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Tastes that matches the filter.
+     * Find the first Taste that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesFindFirstArgs} args - Arguments to find a Tastes
+     * @param {TasteFindFirstArgs} args - Arguments to find a Taste
      * @example
-     * // Get one Tastes
-     * const tastes = await prisma.tastes.findFirst({
+     * // Get one Taste
+     * const taste = await prisma.taste.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends TastesFindFirstArgs>(args?: SelectSubset<T, TastesFindFirstArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends TasteFindFirstArgs>(args?: SelectSubset<T, TasteFindFirstArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Tastes that matches the filter or
+     * Find the first Taste that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesFindFirstOrThrowArgs} args - Arguments to find a Tastes
+     * @param {TasteFindFirstOrThrowArgs} args - Arguments to find a Taste
      * @example
-     * // Get one Tastes
-     * const tastes = await prisma.tastes.findFirstOrThrow({
+     * // Get one Taste
+     * const taste = await prisma.taste.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends TastesFindFirstOrThrowArgs>(args?: SelectSubset<T, TastesFindFirstOrThrowArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends TasteFindFirstOrThrowArgs>(args?: SelectSubset<T, TasteFindFirstOrThrowArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Find zero or more Tastes that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TasteFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Tastes
-     * const tastes = await prisma.tastes.findMany()
+     * const tastes = await prisma.taste.findMany()
      * 
      * // Get first 10 Tastes
-     * const tastes = await prisma.tastes.findMany({ take: 10 })
+     * const tastes = await prisma.taste.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const tastesWithIdOnly = await prisma.tastes.findMany({ select: { id: true } })
+     * const tasteWithIdOnly = await prisma.taste.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends TastesFindManyArgs>(args?: SelectSubset<T, TastesFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends TasteFindManyArgs>(args?: SelectSubset<T, TasteFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Tastes.
-     * @param {TastesCreateArgs} args - Arguments to create a Tastes.
+     * Create a Taste.
+     * @param {TasteCreateArgs} args - Arguments to create a Taste.
      * @example
-     * // Create one Tastes
-     * const Tastes = await prisma.tastes.create({
+     * // Create one Taste
+     * const Taste = await prisma.taste.create({
      *   data: {
-     *     // ... data to create a Tastes
+     *     // ... data to create a Taste
      *   }
      * })
      * 
      */
-    create<T extends TastesCreateArgs>(args: SelectSubset<T, TastesCreateArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends TasteCreateArgs>(args: SelectSubset<T, TasteCreateArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Create many Tastes.
-     * @param {TastesCreateManyArgs} args - Arguments to create many Tastes.
+     * @param {TasteCreateManyArgs} args - Arguments to create many Tastes.
      * @example
      * // Create many Tastes
-     * const tastes = await prisma.tastes.createMany({
+     * const taste = await prisma.taste.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends TastesCreateManyArgs>(args?: SelectSubset<T, TastesCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TasteCreateManyArgs>(args?: SelectSubset<T, TasteCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Create many Tastes and returns the data saved in the database.
-     * @param {TastesCreateManyAndReturnArgs} args - Arguments to create many Tastes.
+     * @param {TasteCreateManyAndReturnArgs} args - Arguments to create many Tastes.
      * @example
      * // Create many Tastes
-     * const tastes = await prisma.tastes.createManyAndReturn({
+     * const taste = await prisma.taste.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
      * // Create many Tastes and only return the `id`
-     * const tastesWithIdOnly = await prisma.tastes.createManyAndReturn({
+     * const tasteWithIdOnly = await prisma.taste.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2592,28 +2528,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends TastesCreateManyAndReturnArgs>(args?: SelectSubset<T, TastesCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends TasteCreateManyAndReturnArgs>(args?: SelectSubset<T, TasteCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Tastes.
-     * @param {TastesDeleteArgs} args - Arguments to delete one Tastes.
+     * Delete a Taste.
+     * @param {TasteDeleteArgs} args - Arguments to delete one Taste.
      * @example
-     * // Delete one Tastes
-     * const Tastes = await prisma.tastes.delete({
+     * // Delete one Taste
+     * const Taste = await prisma.taste.delete({
      *   where: {
-     *     // ... filter to delete one Tastes
+     *     // ... filter to delete one Taste
      *   }
      * })
      * 
      */
-    delete<T extends TastesDeleteArgs>(args: SelectSubset<T, TastesDeleteArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends TasteDeleteArgs>(args: SelectSubset<T, TasteDeleteArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Tastes.
-     * @param {TastesUpdateArgs} args - Arguments to update one Tastes.
+     * Update one Taste.
+     * @param {TasteUpdateArgs} args - Arguments to update one Taste.
      * @example
-     * // Update one Tastes
-     * const tastes = await prisma.tastes.update({
+     * // Update one Taste
+     * const taste = await prisma.taste.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2623,30 +2559,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends TastesUpdateArgs>(args: SelectSubset<T, TastesUpdateArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends TasteUpdateArgs>(args: SelectSubset<T, TasteUpdateArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
      * Delete zero or more Tastes.
-     * @param {TastesDeleteManyArgs} args - Arguments to filter Tastes to delete.
+     * @param {TasteDeleteManyArgs} args - Arguments to filter Tastes to delete.
      * @example
      * // Delete a few Tastes
-     * const { count } = await prisma.tastes.deleteMany({
+     * const { count } = await prisma.taste.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends TastesDeleteManyArgs>(args?: SelectSubset<T, TastesDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TasteDeleteManyArgs>(args?: SelectSubset<T, TasteDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Tastes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TasteUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Tastes
-     * const tastes = await prisma.tastes.updateMany({
+     * const taste = await prisma.taste.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2656,14 +2592,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends TastesUpdateManyArgs>(args: SelectSubset<T, TastesUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TasteUpdateManyArgs>(args: SelectSubset<T, TasteUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
      * Update zero or more Tastes and returns the data updated in the database.
-     * @param {TastesUpdateManyAndReturnArgs} args - Arguments to update many Tastes.
+     * @param {TasteUpdateManyAndReturnArgs} args - Arguments to update many Tastes.
      * @example
      * // Update many Tastes
-     * const tastes = await prisma.tastes.updateManyAndReturn({
+     * const taste = await prisma.taste.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2673,7 +2609,7 @@ export namespace Prisma {
      * })
      * 
      * // Update zero or more Tastes and only return the `id`
-     * const tastesWithIdOnly = await prisma.tastes.updateManyAndReturn({
+     * const tasteWithIdOnly = await prisma.taste.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2686,56 +2622,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends TastesUpdateManyAndReturnArgs>(args: SelectSubset<T, TastesUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends TasteUpdateManyAndReturnArgs>(args: SelectSubset<T, TasteUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Tastes.
-     * @param {TastesUpsertArgs} args - Arguments to update or create a Tastes.
+     * Create or update one Taste.
+     * @param {TasteUpsertArgs} args - Arguments to update or create a Taste.
      * @example
-     * // Update or create a Tastes
-     * const tastes = await prisma.tastes.upsert({
+     * // Update or create a Taste
+     * const taste = await prisma.taste.upsert({
      *   create: {
-     *     // ... data to create a Tastes
+     *     // ... data to create a Taste
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Tastes we want to update
+     *     // ... the filter for the Taste we want to update
      *   }
      * })
      */
-    upsert<T extends TastesUpsertArgs>(args: SelectSubset<T, TastesUpsertArgs<ExtArgs>>): Prisma__TastesClient<$Result.GetResult<Prisma.$TastesPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends TasteUpsertArgs>(args: SelectSubset<T, TasteUpsertArgs<ExtArgs>>): Prisma__TasteClient<$Result.GetResult<Prisma.$TastePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
      * Count the number of Tastes.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesCountArgs} args - Arguments to filter Tastes to count.
+     * @param {TasteCountArgs} args - Arguments to filter Tastes to count.
      * @example
      * // Count the number of Tastes
-     * const count = await prisma.tastes.count({
+     * const count = await prisma.taste.count({
      *   where: {
      *     // ... the filter for the Tastes we want to count
      *   }
      * })
     **/
-    count<T extends TastesCountArgs>(
-      args?: Subset<T, TastesCountArgs>,
+    count<T extends TasteCountArgs>(
+      args?: Subset<T, TasteCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], TastesCountAggregateOutputType>
+          : GetScalarType<T['select'], TasteCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Tastes.
+     * Allows you to perform aggregations operations on a Taste.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TasteAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2755,13 +2691,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends TastesAggregateArgs>(args: Subset<T, TastesAggregateArgs>): Prisma.PrismaPromise<GetTastesAggregateType<T>>
+    aggregate<T extends TasteAggregateArgs>(args: Subset<T, TasteAggregateArgs>): Prisma.PrismaPromise<GetTasteAggregateType<T>>
 
     /**
-     * Group by Tastes.
+     * Group by Taste.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TastesGroupByArgs} args - Group by arguments.
+     * @param {TasteGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2776,14 +2712,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends TastesGroupByArgs,
+      T extends TasteGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: TastesGroupByArgs['orderBy'] }
-        : { orderBy?: TastesGroupByArgs['orderBy'] },
+        ? { orderBy: TasteGroupByArgs['orderBy'] }
+        : { orderBy?: TasteGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -2832,22 +2768,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, TastesGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTastesGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TasteGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTasteGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Tastes model
+   * Fields of the Taste model
    */
-  readonly fields: TastesFieldRefs;
+  readonly fields: TasteFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Tastes.
+   * The delegate class that acts as a "Promise-like" for Taste.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__TastesClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TasteClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    card<T extends Tastes$cardArgs<ExtArgs> = {}>(args?: Subset<T, Tastes$cardArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CardPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    card<T extends CardDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CardDefaultArgs<ExtArgs>>): Prisma__CardClient<$Result.GetResult<Prisma.$CardPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2874,93 +2810,95 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Tastes model
+   * Fields of the Taste model
    */
-  interface TastesFieldRefs {
-    readonly id: FieldRef<"Tastes", 'Int'>
-    readonly title: FieldRef<"Tastes", 'String'>
-    readonly isPrivate: FieldRef<"Tastes", 'Boolean'>
-    readonly value: FieldRef<"Tastes", 'String'>
+  interface TasteFieldRefs {
+    readonly id: FieldRef<"Taste", 'Int'>
+    readonly title: FieldRef<"Taste", 'String'>
+    readonly isMandatory: FieldRef<"Taste", 'Boolean'>
+    readonly isPrivate: FieldRef<"Taste", 'Boolean'>
+    readonly value: FieldRef<"Taste", 'String'>
+    readonly cardId: FieldRef<"Taste", 'Int'>
   }
     
 
   // Custom InputTypes
   /**
-   * Tastes findUnique
+   * Taste findUnique
    */
-  export type TastesFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
-     * Filter, which Tastes to fetch.
+     * Filter, which Taste to fetch.
      */
-    where: TastesWhereUniqueInput
+    where: TasteWhereUniqueInput
   }
 
   /**
-   * Tastes findUniqueOrThrow
+   * Taste findUniqueOrThrow
    */
-  export type TastesFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
-     * Filter, which Tastes to fetch.
+     * Filter, which Taste to fetch.
      */
-    where: TastesWhereUniqueInput
+    where: TasteWhereUniqueInput
   }
 
   /**
-   * Tastes findFirst
+   * Taste findFirst
    */
-  export type TastesFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
-     * Filter, which Tastes to fetch.
+     * Filter, which Taste to fetch.
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of Tastes to fetch.
      */
-    orderBy?: TastesOrderByWithRelationInput | TastesOrderByWithRelationInput[]
+    orderBy?: TasteOrderByWithRelationInput | TasteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the position for searching for Tastes.
      */
-    cursor?: TastesWhereUniqueInput
+    cursor?: TasteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -2978,41 +2916,41 @@ export namespace Prisma {
      * 
      * Filter by unique combinations of Tastes.
      */
-    distinct?: TastesScalarFieldEnum | TastesScalarFieldEnum[]
+    distinct?: TasteScalarFieldEnum | TasteScalarFieldEnum[]
   }
 
   /**
-   * Tastes findFirstOrThrow
+   * Taste findFirstOrThrow
    */
-  export type TastesFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
-     * Filter, which Tastes to fetch.
+     * Filter, which Taste to fetch.
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of Tastes to fetch.
      */
-    orderBy?: TastesOrderByWithRelationInput | TastesOrderByWithRelationInput[]
+    orderBy?: TasteOrderByWithRelationInput | TasteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the position for searching for Tastes.
      */
-    cursor?: TastesWhereUniqueInput
+    cursor?: TasteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -3030,41 +2968,41 @@ export namespace Prisma {
      * 
      * Filter by unique combinations of Tastes.
      */
-    distinct?: TastesScalarFieldEnum | TastesScalarFieldEnum[]
+    distinct?: TasteScalarFieldEnum | TasteScalarFieldEnum[]
   }
 
   /**
-   * Tastes findMany
+   * Taste findMany
    */
-  export type TastesFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
      * Filter, which Tastes to fetch.
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
      * Determine the order of Tastes to fetch.
      */
-    orderBy?: TastesOrderByWithRelationInput | TastesOrderByWithRelationInput[]
+    orderBy?: TasteOrderByWithRelationInput | TasteOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the position for listing Tastes.
      */
-    cursor?: TastesWhereUniqueInput
+    cursor?: TasteWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
@@ -3082,99 +3020,103 @@ export namespace Prisma {
      * 
      * Filter by unique combinations of Tastes.
      */
-    distinct?: TastesScalarFieldEnum | TastesScalarFieldEnum[]
+    distinct?: TasteScalarFieldEnum | TasteScalarFieldEnum[]
   }
 
   /**
-   * Tastes create
+   * Taste create
    */
-  export type TastesCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
-     * The data needed to create a Tastes.
+     * The data needed to create a Taste.
      */
-    data: XOR<TastesCreateInput, TastesUncheckedCreateInput>
+    data: XOR<TasteCreateInput, TasteUncheckedCreateInput>
   }
 
   /**
-   * Tastes createMany
+   * Taste createMany
    */
-  export type TastesCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * The data used to create many Tastes.
      */
-    data: TastesCreateManyInput | TastesCreateManyInput[]
+    data: TasteCreateManyInput | TasteCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Tastes createManyAndReturn
+   * Taste createManyAndReturn
    */
-  export type TastesCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TasteSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * The data used to create many Tastes.
      */
-    data: TastesCreateManyInput | TastesCreateManyInput[]
+    data: TasteCreateManyInput | TasteCreateManyInput[]
     skipDuplicates?: boolean
-  }
-
-  /**
-   * Tastes update
-   */
-  export type TastesUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Tastes
-     */
-    select?: TastesSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Tastes
-     */
-    omit?: TastesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
-    /**
-     * The data needed to update a Tastes.
-     */
-    data: XOR<TastesUpdateInput, TastesUncheckedUpdateInput>
-    /**
-     * Choose, which Tastes to update.
-     */
-    where: TastesWhereUniqueInput
+    include?: TasteIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Tastes updateMany
+   * Taste update
    */
-  export type TastesUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Taste
+     */
+    select?: TasteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Taste
+     */
+    omit?: TasteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TasteInclude<ExtArgs> | null
+    /**
+     * The data needed to update a Taste.
+     */
+    data: XOR<TasteUpdateInput, TasteUncheckedUpdateInput>
+    /**
+     * Choose, which Taste to update.
+     */
+    where: TasteWhereUniqueInput
+  }
+
+  /**
+   * Taste updateMany
+   */
+  export type TasteUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * The data used to update Tastes.
      */
-    data: XOR<TastesUpdateManyMutationInput, TastesUncheckedUpdateManyInput>
+    data: XOR<TasteUpdateManyMutationInput, TasteUncheckedUpdateManyInput>
     /**
      * Filter which Tastes to update
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * Limit how many Tastes to update.
      */
@@ -3182,91 +3124,95 @@ export namespace Prisma {
   }
 
   /**
-   * Tastes updateManyAndReturn
+   * Taste updateManyAndReturn
    */
-  export type TastesUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: TasteSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * The data used to update Tastes.
      */
-    data: XOR<TastesUpdateManyMutationInput, TastesUncheckedUpdateManyInput>
+    data: XOR<TasteUpdateManyMutationInput, TasteUncheckedUpdateManyInput>
     /**
      * Filter which Tastes to update
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * Limit how many Tastes to update.
      */
     limit?: number
-  }
-
-  /**
-   * Tastes upsert
-   */
-  export type TastesUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Tastes
-     */
-    select?: TastesSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Tastes
-     */
-    omit?: TastesOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
-    /**
-     * The filter to search for the Tastes to update in case it exists.
-     */
-    where: TastesWhereUniqueInput
-    /**
-     * In case the Tastes found by the `where` argument doesn't exist, create a new Tastes with this data.
-     */
-    create: XOR<TastesCreateInput, TastesUncheckedCreateInput>
-    /**
-     * In case the Tastes was found with the provided `where` argument, update it with this data.
-     */
-    update: XOR<TastesUpdateInput, TastesUncheckedUpdateInput>
+    include?: TasteIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Tastes delete
+   * Taste upsert
    */
-  export type TastesDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Tastes
+     * Select specific fields to fetch from the Taste
      */
-    select?: TastesSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Tastes
+     * Omit specific fields from the Taste
      */
-    omit?: TastesOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
     /**
-     * Filter which Tastes to delete.
+     * The filter to search for the Taste to update in case it exists.
      */
-    where: TastesWhereUniqueInput
+    where: TasteWhereUniqueInput
+    /**
+     * In case the Taste found by the `where` argument doesn't exist, create a new Taste with this data.
+     */
+    create: XOR<TasteCreateInput, TasteUncheckedCreateInput>
+    /**
+     * In case the Taste was found with the provided `where` argument, update it with this data.
+     */
+    update: XOR<TasteUpdateInput, TasteUncheckedUpdateInput>
   }
 
   /**
-   * Tastes deleteMany
+   * Taste delete
    */
-  export type TastesDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    /**
+     * Select specific fields to fetch from the Taste
+     */
+    select?: TasteSelect<ExtArgs> | null
+    /**
+     * Omit specific fields from the Taste
+     */
+    omit?: TasteOmit<ExtArgs> | null
+    /**
+     * Choose, which related nodes to fetch as well
+     */
+    include?: TasteInclude<ExtArgs> | null
+    /**
+     * Filter which Taste to delete.
+     */
+    where: TasteWhereUniqueInput
+  }
+
+  /**
+   * Taste deleteMany
+   */
+  export type TasteDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Filter which Tastes to delete
      */
-    where?: TastesWhereInput
+    where?: TasteWhereInput
     /**
      * Limit how many Tastes to delete.
      */
@@ -3274,45 +3220,21 @@ export namespace Prisma {
   }
 
   /**
-   * Tastes.card
+   * Taste without action
    */
-  export type Tastes$cardArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TasteDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Card
+     * Select specific fields to fetch from the Taste
      */
-    select?: CardSelect<ExtArgs> | null
+    select?: TasteSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Card
+     * Omit specific fields from the Taste
      */
-    omit?: CardOmit<ExtArgs> | null
+    omit?: TasteOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: CardInclude<ExtArgs> | null
-    where?: CardWhereInput
-    orderBy?: CardOrderByWithRelationInput | CardOrderByWithRelationInput[]
-    cursor?: CardWhereUniqueInput
-    take?: number
-    skip?: number
-    distinct?: CardScalarFieldEnum | CardScalarFieldEnum[]
-  }
-
-  /**
-   * Tastes without action
-   */
-  export type TastesDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Tastes
-     */
-    select?: TastesSelect<ExtArgs> | null
-    /**
-     * Omit specific fields from the Tastes
-     */
-    omit?: TastesOmit<ExtArgs> | null
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: TastesInclude<ExtArgs> | null
+    include?: TasteInclude<ExtArgs> | null
   }
 
 
@@ -3333,27 +3255,24 @@ export namespace Prisma {
   export const CardScalarFieldEnum: {
     id: 'id',
     username: 'username',
-    name: 'name',
     password: 'password',
-    country: 'country',
-    email: 'email',
-    number: 'number',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt',
-    birthdate: 'birthdate'
+    updatedAt: 'updatedAt'
   };
 
   export type CardScalarFieldEnum = (typeof CardScalarFieldEnum)[keyof typeof CardScalarFieldEnum]
 
 
-  export const TastesScalarFieldEnum: {
+  export const TasteScalarFieldEnum: {
     id: 'id',
     title: 'title',
+    isMandatory: 'isMandatory',
     isPrivate: 'isPrivate',
-    value: 'value'
+    value: 'value',
+    cardId: 'cardId'
   };
 
-  export type TastesScalarFieldEnum = (typeof TastesScalarFieldEnum)[keyof typeof TastesScalarFieldEnum]
+  export type TasteScalarFieldEnum = (typeof TasteScalarFieldEnum)[keyof typeof TasteScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -3370,14 +3289,6 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
-
-
-  export const NullsOrder: {
-    first: 'first',
-    last: 'last'
-  };
-
-  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -3457,29 +3368,19 @@ export namespace Prisma {
     NOT?: CardWhereInput | CardWhereInput[]
     id?: IntFilter<"Card"> | number
     username?: StringFilter<"Card"> | string
-    name?: StringNullableFilter<"Card"> | string | null
     password?: StringFilter<"Card"> | string
-    country?: StringNullableFilter<"Card"> | string | null
-    email?: StringNullableFilter<"Card"> | string | null
-    number?: StringNullableFilter<"Card"> | string | null
     createdAt?: DateTimeFilter<"Card"> | Date | string
     updatedAt?: DateTimeFilter<"Card"> | Date | string
-    birthdate?: DateTimeNullableFilter<"Card"> | Date | string | null
-    column?: TastesListRelationFilter
+    tastes?: TasteListRelationFilter
   }
 
   export type CardOrderByWithRelationInput = {
     id?: SortOrder
     username?: SortOrder
-    name?: SortOrderInput | SortOrder
     password?: SortOrder
-    country?: SortOrderInput | SortOrder
-    email?: SortOrderInput | SortOrder
-    number?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    birthdate?: SortOrderInput | SortOrder
-    column?: TastesOrderByRelationAggregateInput
+    tastes?: TasteOrderByRelationAggregateInput
   }
 
   export type CardWhereUniqueInput = Prisma.AtLeast<{
@@ -3488,28 +3389,18 @@ export namespace Prisma {
     AND?: CardWhereInput | CardWhereInput[]
     OR?: CardWhereInput[]
     NOT?: CardWhereInput | CardWhereInput[]
-    name?: StringNullableFilter<"Card"> | string | null
     password?: StringFilter<"Card"> | string
-    country?: StringNullableFilter<"Card"> | string | null
-    email?: StringNullableFilter<"Card"> | string | null
-    number?: StringNullableFilter<"Card"> | string | null
     createdAt?: DateTimeFilter<"Card"> | Date | string
     updatedAt?: DateTimeFilter<"Card"> | Date | string
-    birthdate?: DateTimeNullableFilter<"Card"> | Date | string | null
-    column?: TastesListRelationFilter
+    tastes?: TasteListRelationFilter
   }, "id" | "username">
 
   export type CardOrderByWithAggregationInput = {
     id?: SortOrder
     username?: SortOrder
-    name?: SortOrderInput | SortOrder
     password?: SortOrder
-    country?: SortOrderInput | SortOrder
-    email?: SortOrderInput | SortOrder
-    number?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    birthdate?: SortOrderInput | SortOrder
     _count?: CardCountOrderByAggregateInput
     _avg?: CardAvgOrderByAggregateInput
     _max?: CardMaxOrderByAggregateInput
@@ -3523,208 +3414,187 @@ export namespace Prisma {
     NOT?: CardScalarWhereWithAggregatesInput | CardScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Card"> | number
     username?: StringWithAggregatesFilter<"Card"> | string
-    name?: StringNullableWithAggregatesFilter<"Card"> | string | null
     password?: StringWithAggregatesFilter<"Card"> | string
-    country?: StringNullableWithAggregatesFilter<"Card"> | string | null
-    email?: StringNullableWithAggregatesFilter<"Card"> | string | null
-    number?: StringNullableWithAggregatesFilter<"Card"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Card"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Card"> | Date | string
-    birthdate?: DateTimeNullableWithAggregatesFilter<"Card"> | Date | string | null
   }
 
-  export type TastesWhereInput = {
-    AND?: TastesWhereInput | TastesWhereInput[]
-    OR?: TastesWhereInput[]
-    NOT?: TastesWhereInput | TastesWhereInput[]
-    id?: IntFilter<"Tastes"> | number
-    title?: StringFilter<"Tastes"> | string
-    isPrivate?: BoolFilter<"Tastes"> | boolean
-    value?: StringFilter<"Tastes"> | string
-    card?: CardListRelationFilter
+  export type TasteWhereInput = {
+    AND?: TasteWhereInput | TasteWhereInput[]
+    OR?: TasteWhereInput[]
+    NOT?: TasteWhereInput | TasteWhereInput[]
+    id?: IntFilter<"Taste"> | number
+    title?: StringFilter<"Taste"> | string
+    isMandatory?: BoolFilter<"Taste"> | boolean
+    isPrivate?: BoolFilter<"Taste"> | boolean
+    value?: StringFilter<"Taste"> | string
+    cardId?: IntFilter<"Taste"> | number
+    card?: XOR<CardScalarRelationFilter, CardWhereInput>
   }
 
-  export type TastesOrderByWithRelationInput = {
+  export type TasteOrderByWithRelationInput = {
     id?: SortOrder
     title?: SortOrder
+    isMandatory?: SortOrder
     isPrivate?: SortOrder
     value?: SortOrder
-    card?: CardOrderByRelationAggregateInput
+    cardId?: SortOrder
+    card?: CardOrderByWithRelationInput
   }
 
-  export type TastesWhereUniqueInput = Prisma.AtLeast<{
+  export type TasteWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: TastesWhereInput | TastesWhereInput[]
-    OR?: TastesWhereInput[]
-    NOT?: TastesWhereInput | TastesWhereInput[]
-    title?: StringFilter<"Tastes"> | string
-    isPrivate?: BoolFilter<"Tastes"> | boolean
-    value?: StringFilter<"Tastes"> | string
-    card?: CardListRelationFilter
+    AND?: TasteWhereInput | TasteWhereInput[]
+    OR?: TasteWhereInput[]
+    NOT?: TasteWhereInput | TasteWhereInput[]
+    title?: StringFilter<"Taste"> | string
+    isMandatory?: BoolFilter<"Taste"> | boolean
+    isPrivate?: BoolFilter<"Taste"> | boolean
+    value?: StringFilter<"Taste"> | string
+    cardId?: IntFilter<"Taste"> | number
+    card?: XOR<CardScalarRelationFilter, CardWhereInput>
   }, "id">
 
-  export type TastesOrderByWithAggregationInput = {
+  export type TasteOrderByWithAggregationInput = {
     id?: SortOrder
     title?: SortOrder
+    isMandatory?: SortOrder
     isPrivate?: SortOrder
     value?: SortOrder
-    _count?: TastesCountOrderByAggregateInput
-    _avg?: TastesAvgOrderByAggregateInput
-    _max?: TastesMaxOrderByAggregateInput
-    _min?: TastesMinOrderByAggregateInput
-    _sum?: TastesSumOrderByAggregateInput
+    cardId?: SortOrder
+    _count?: TasteCountOrderByAggregateInput
+    _avg?: TasteAvgOrderByAggregateInput
+    _max?: TasteMaxOrderByAggregateInput
+    _min?: TasteMinOrderByAggregateInput
+    _sum?: TasteSumOrderByAggregateInput
   }
 
-  export type TastesScalarWhereWithAggregatesInput = {
-    AND?: TastesScalarWhereWithAggregatesInput | TastesScalarWhereWithAggregatesInput[]
-    OR?: TastesScalarWhereWithAggregatesInput[]
-    NOT?: TastesScalarWhereWithAggregatesInput | TastesScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Tastes"> | number
-    title?: StringWithAggregatesFilter<"Tastes"> | string
-    isPrivate?: BoolWithAggregatesFilter<"Tastes"> | boolean
-    value?: StringWithAggregatesFilter<"Tastes"> | string
+  export type TasteScalarWhereWithAggregatesInput = {
+    AND?: TasteScalarWhereWithAggregatesInput | TasteScalarWhereWithAggregatesInput[]
+    OR?: TasteScalarWhereWithAggregatesInput[]
+    NOT?: TasteScalarWhereWithAggregatesInput | TasteScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Taste"> | number
+    title?: StringWithAggregatesFilter<"Taste"> | string
+    isMandatory?: BoolWithAggregatesFilter<"Taste"> | boolean
+    isPrivate?: BoolWithAggregatesFilter<"Taste"> | boolean
+    value?: StringWithAggregatesFilter<"Taste"> | string
+    cardId?: IntWithAggregatesFilter<"Taste"> | number
   }
 
   export type CardCreateInput = {
     username: string
-    name?: string | null
     password: string
-    country?: string | null
-    email?: string | null
-    number?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    birthdate?: Date | string | null
-    column?: TastesCreateNestedManyWithoutCardInput
+    tastes?: TasteCreateNestedManyWithoutCardInput
   }
 
   export type CardUncheckedCreateInput = {
     id?: number
     username: string
-    name?: string | null
     password: string
-    country?: string | null
-    email?: string | null
-    number?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    birthdate?: Date | string | null
-    column?: TastesUncheckedCreateNestedManyWithoutCardInput
+    tastes?: TasteUncheckedCreateNestedManyWithoutCardInput
   }
 
   export type CardUpdateInput = {
     username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    column?: TastesUpdateManyWithoutCardNestedInput
+    tastes?: TasteUpdateManyWithoutCardNestedInput
   }
 
   export type CardUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-    column?: TastesUncheckedUpdateManyWithoutCardNestedInput
+    tastes?: TasteUncheckedUpdateManyWithoutCardNestedInput
   }
 
   export type CardCreateManyInput = {
     id?: number
     username: string
-    name?: string | null
     password: string
-    country?: string | null
-    email?: string | null
-    number?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    birthdate?: Date | string | null
   }
 
   export type CardUpdateManyMutationInput = {
     username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
   export type CardUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
-  export type TastesCreateInput = {
+  export type TasteCreateInput = {
     title: string
+    isMandatory?: boolean
     isPrivate?: boolean
     value: string
-    card?: CardCreateNestedManyWithoutColumnInput
+    card: CardCreateNestedOneWithoutTastesInput
   }
 
-  export type TastesUncheckedCreateInput = {
+  export type TasteUncheckedCreateInput = {
     id?: number
     title: string
+    isMandatory?: boolean
     isPrivate?: boolean
     value: string
-    card?: CardUncheckedCreateNestedManyWithoutColumnInput
+    cardId: number
   }
 
-  export type TastesUpdateInput = {
+  export type TasteUpdateInput = {
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
-    card?: CardUpdateManyWithoutColumnNestedInput
+    card?: CardUpdateOneRequiredWithoutTastesNestedInput
   }
 
-  export type TastesUncheckedUpdateInput = {
+  export type TasteUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
-    card?: CardUncheckedUpdateManyWithoutColumnNestedInput
+    cardId?: IntFieldUpdateOperationsInput | number
   }
 
-  export type TastesCreateManyInput = {
+  export type TasteCreateManyInput = {
     id?: number
     title: string
+    isMandatory?: boolean
     isPrivate?: boolean
     value: string
+    cardId: number
   }
 
-  export type TastesUpdateManyMutationInput = {
+  export type TasteUpdateManyMutationInput = {
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
   }
 
-  export type TastesUncheckedUpdateManyInput = {
+  export type TasteUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
+    cardId?: IntFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -3753,21 +3623,6 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type StringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
-  }
-
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -3779,43 +3634,22 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type DateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
+  export type TasteListRelationFilter = {
+    every?: TasteWhereInput
+    some?: TasteWhereInput
+    none?: TasteWhereInput
   }
 
-  export type TastesListRelationFilter = {
-    every?: TastesWhereInput
-    some?: TastesWhereInput
-    none?: TastesWhereInput
-  }
-
-  export type SortOrderInput = {
-    sort: SortOrder
-    nulls?: NullsOrder
-  }
-
-  export type TastesOrderByRelationAggregateInput = {
+  export type TasteOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
   export type CardCountOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    name?: SortOrder
     password?: SortOrder
-    country?: SortOrder
-    email?: SortOrder
-    number?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    birthdate?: SortOrder
   }
 
   export type CardAvgOrderByAggregateInput = {
@@ -3825,27 +3659,17 @@ export namespace Prisma {
   export type CardMaxOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    name?: SortOrder
     password?: SortOrder
-    country?: SortOrder
-    email?: SortOrder
-    number?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    birthdate?: SortOrder
   }
 
   export type CardMinOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
-    name?: SortOrder
     password?: SortOrder
-    country?: SortOrder
-    email?: SortOrder
-    number?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    birthdate?: SortOrder
   }
 
   export type CardSumOrderByAggregateInput = {
@@ -3886,24 +3710,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
-  }
-
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -3918,62 +3724,51 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
   export type BoolFilter<$PrismaModel = never> = {
     equals?: boolean | BooleanFieldRefInput<$PrismaModel>
     not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
-  export type CardListRelationFilter = {
-    every?: CardWhereInput
-    some?: CardWhereInput
-    none?: CardWhereInput
+  export type CardScalarRelationFilter = {
+    is?: CardWhereInput
+    isNot?: CardWhereInput
   }
 
-  export type CardOrderByRelationAggregateInput = {
-    _count?: SortOrder
-  }
-
-  export type TastesCountOrderByAggregateInput = {
+  export type TasteCountOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    isMandatory?: SortOrder
     isPrivate?: SortOrder
     value?: SortOrder
+    cardId?: SortOrder
   }
 
-  export type TastesAvgOrderByAggregateInput = {
+  export type TasteAvgOrderByAggregateInput = {
     id?: SortOrder
+    cardId?: SortOrder
   }
 
-  export type TastesMaxOrderByAggregateInput = {
+  export type TasteMaxOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    isMandatory?: SortOrder
     isPrivate?: SortOrder
     value?: SortOrder
+    cardId?: SortOrder
   }
 
-  export type TastesMinOrderByAggregateInput = {
+  export type TasteMinOrderByAggregateInput = {
     id?: SortOrder
     title?: SortOrder
+    isMandatory?: SortOrder
     isPrivate?: SortOrder
     value?: SortOrder
+    cardId?: SortOrder
   }
 
-  export type TastesSumOrderByAggregateInput = {
+  export type TasteSumOrderByAggregateInput = {
     id?: SortOrder
+    cardId?: SortOrder
   }
 
   export type BoolWithAggregatesFilter<$PrismaModel = never> = {
@@ -3984,45 +3779,40 @@ export namespace Prisma {
     _max?: NestedBoolFilter<$PrismaModel>
   }
 
-  export type TastesCreateNestedManyWithoutCardInput = {
-    create?: XOR<TastesCreateWithoutCardInput, TastesUncheckedCreateWithoutCardInput> | TastesCreateWithoutCardInput[] | TastesUncheckedCreateWithoutCardInput[]
-    connectOrCreate?: TastesCreateOrConnectWithoutCardInput | TastesCreateOrConnectWithoutCardInput[]
-    connect?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
+  export type TasteCreateNestedManyWithoutCardInput = {
+    create?: XOR<TasteCreateWithoutCardInput, TasteUncheckedCreateWithoutCardInput> | TasteCreateWithoutCardInput[] | TasteUncheckedCreateWithoutCardInput[]
+    connectOrCreate?: TasteCreateOrConnectWithoutCardInput | TasteCreateOrConnectWithoutCardInput[]
+    createMany?: TasteCreateManyCardInputEnvelope
+    connect?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
   }
 
-  export type TastesUncheckedCreateNestedManyWithoutCardInput = {
-    create?: XOR<TastesCreateWithoutCardInput, TastesUncheckedCreateWithoutCardInput> | TastesCreateWithoutCardInput[] | TastesUncheckedCreateWithoutCardInput[]
-    connectOrCreate?: TastesCreateOrConnectWithoutCardInput | TastesCreateOrConnectWithoutCardInput[]
-    connect?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
+  export type TasteUncheckedCreateNestedManyWithoutCardInput = {
+    create?: XOR<TasteCreateWithoutCardInput, TasteUncheckedCreateWithoutCardInput> | TasteCreateWithoutCardInput[] | TasteUncheckedCreateWithoutCardInput[]
+    connectOrCreate?: TasteCreateOrConnectWithoutCardInput | TasteCreateOrConnectWithoutCardInput[]
+    createMany?: TasteCreateManyCardInputEnvelope
+    connect?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
-  }
-
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
   }
 
-  export type NullableDateTimeFieldUpdateOperationsInput = {
-    set?: Date | string | null
-  }
-
-  export type TastesUpdateManyWithoutCardNestedInput = {
-    create?: XOR<TastesCreateWithoutCardInput, TastesUncheckedCreateWithoutCardInput> | TastesCreateWithoutCardInput[] | TastesUncheckedCreateWithoutCardInput[]
-    connectOrCreate?: TastesCreateOrConnectWithoutCardInput | TastesCreateOrConnectWithoutCardInput[]
-    upsert?: TastesUpsertWithWhereUniqueWithoutCardInput | TastesUpsertWithWhereUniqueWithoutCardInput[]
-    set?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    disconnect?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    delete?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    connect?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    update?: TastesUpdateWithWhereUniqueWithoutCardInput | TastesUpdateWithWhereUniqueWithoutCardInput[]
-    updateMany?: TastesUpdateManyWithWhereWithoutCardInput | TastesUpdateManyWithWhereWithoutCardInput[]
-    deleteMany?: TastesScalarWhereInput | TastesScalarWhereInput[]
+  export type TasteUpdateManyWithoutCardNestedInput = {
+    create?: XOR<TasteCreateWithoutCardInput, TasteUncheckedCreateWithoutCardInput> | TasteCreateWithoutCardInput[] | TasteUncheckedCreateWithoutCardInput[]
+    connectOrCreate?: TasteCreateOrConnectWithoutCardInput | TasteCreateOrConnectWithoutCardInput[]
+    upsert?: TasteUpsertWithWhereUniqueWithoutCardInput | TasteUpsertWithWhereUniqueWithoutCardInput[]
+    createMany?: TasteCreateManyCardInputEnvelope
+    set?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    disconnect?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    delete?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    connect?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    update?: TasteUpdateWithWhereUniqueWithoutCardInput | TasteUpdateWithWhereUniqueWithoutCardInput[]
+    updateMany?: TasteUpdateManyWithWhereWithoutCardInput | TasteUpdateManyWithWhereWithoutCardInput[]
+    deleteMany?: TasteScalarWhereInput | TasteScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -4033,59 +3823,36 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type TastesUncheckedUpdateManyWithoutCardNestedInput = {
-    create?: XOR<TastesCreateWithoutCardInput, TastesUncheckedCreateWithoutCardInput> | TastesCreateWithoutCardInput[] | TastesUncheckedCreateWithoutCardInput[]
-    connectOrCreate?: TastesCreateOrConnectWithoutCardInput | TastesCreateOrConnectWithoutCardInput[]
-    upsert?: TastesUpsertWithWhereUniqueWithoutCardInput | TastesUpsertWithWhereUniqueWithoutCardInput[]
-    set?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    disconnect?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    delete?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    connect?: TastesWhereUniqueInput | TastesWhereUniqueInput[]
-    update?: TastesUpdateWithWhereUniqueWithoutCardInput | TastesUpdateWithWhereUniqueWithoutCardInput[]
-    updateMany?: TastesUpdateManyWithWhereWithoutCardInput | TastesUpdateManyWithWhereWithoutCardInput[]
-    deleteMany?: TastesScalarWhereInput | TastesScalarWhereInput[]
+  export type TasteUncheckedUpdateManyWithoutCardNestedInput = {
+    create?: XOR<TasteCreateWithoutCardInput, TasteUncheckedCreateWithoutCardInput> | TasteCreateWithoutCardInput[] | TasteUncheckedCreateWithoutCardInput[]
+    connectOrCreate?: TasteCreateOrConnectWithoutCardInput | TasteCreateOrConnectWithoutCardInput[]
+    upsert?: TasteUpsertWithWhereUniqueWithoutCardInput | TasteUpsertWithWhereUniqueWithoutCardInput[]
+    createMany?: TasteCreateManyCardInputEnvelope
+    set?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    disconnect?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    delete?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    connect?: TasteWhereUniqueInput | TasteWhereUniqueInput[]
+    update?: TasteUpdateWithWhereUniqueWithoutCardInput | TasteUpdateWithWhereUniqueWithoutCardInput[]
+    updateMany?: TasteUpdateManyWithWhereWithoutCardInput | TasteUpdateManyWithWhereWithoutCardInput[]
+    deleteMany?: TasteScalarWhereInput | TasteScalarWhereInput[]
   }
 
-  export type CardCreateNestedManyWithoutColumnInput = {
-    create?: XOR<CardCreateWithoutColumnInput, CardUncheckedCreateWithoutColumnInput> | CardCreateWithoutColumnInput[] | CardUncheckedCreateWithoutColumnInput[]
-    connectOrCreate?: CardCreateOrConnectWithoutColumnInput | CardCreateOrConnectWithoutColumnInput[]
-    connect?: CardWhereUniqueInput | CardWhereUniqueInput[]
-  }
-
-  export type CardUncheckedCreateNestedManyWithoutColumnInput = {
-    create?: XOR<CardCreateWithoutColumnInput, CardUncheckedCreateWithoutColumnInput> | CardCreateWithoutColumnInput[] | CardUncheckedCreateWithoutColumnInput[]
-    connectOrCreate?: CardCreateOrConnectWithoutColumnInput | CardCreateOrConnectWithoutColumnInput[]
-    connect?: CardWhereUniqueInput | CardWhereUniqueInput[]
+  export type CardCreateNestedOneWithoutTastesInput = {
+    create?: XOR<CardCreateWithoutTastesInput, CardUncheckedCreateWithoutTastesInput>
+    connectOrCreate?: CardCreateOrConnectWithoutTastesInput
+    connect?: CardWhereUniqueInput
   }
 
   export type BoolFieldUpdateOperationsInput = {
     set?: boolean
   }
 
-  export type CardUpdateManyWithoutColumnNestedInput = {
-    create?: XOR<CardCreateWithoutColumnInput, CardUncheckedCreateWithoutColumnInput> | CardCreateWithoutColumnInput[] | CardUncheckedCreateWithoutColumnInput[]
-    connectOrCreate?: CardCreateOrConnectWithoutColumnInput | CardCreateOrConnectWithoutColumnInput[]
-    upsert?: CardUpsertWithWhereUniqueWithoutColumnInput | CardUpsertWithWhereUniqueWithoutColumnInput[]
-    set?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    disconnect?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    delete?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    connect?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    update?: CardUpdateWithWhereUniqueWithoutColumnInput | CardUpdateWithWhereUniqueWithoutColumnInput[]
-    updateMany?: CardUpdateManyWithWhereWithoutColumnInput | CardUpdateManyWithWhereWithoutColumnInput[]
-    deleteMany?: CardScalarWhereInput | CardScalarWhereInput[]
-  }
-
-  export type CardUncheckedUpdateManyWithoutColumnNestedInput = {
-    create?: XOR<CardCreateWithoutColumnInput, CardUncheckedCreateWithoutColumnInput> | CardCreateWithoutColumnInput[] | CardUncheckedCreateWithoutColumnInput[]
-    connectOrCreate?: CardCreateOrConnectWithoutColumnInput | CardCreateOrConnectWithoutColumnInput[]
-    upsert?: CardUpsertWithWhereUniqueWithoutColumnInput | CardUpsertWithWhereUniqueWithoutColumnInput[]
-    set?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    disconnect?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    delete?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    connect?: CardWhereUniqueInput | CardWhereUniqueInput[]
-    update?: CardUpdateWithWhereUniqueWithoutColumnInput | CardUpdateWithWhereUniqueWithoutColumnInput[]
-    updateMany?: CardUpdateManyWithWhereWithoutColumnInput | CardUpdateManyWithWhereWithoutColumnInput[]
-    deleteMany?: CardScalarWhereInput | CardScalarWhereInput[]
+  export type CardUpdateOneRequiredWithoutTastesNestedInput = {
+    create?: XOR<CardCreateWithoutTastesInput, CardUncheckedCreateWithoutTastesInput>
+    connectOrCreate?: CardCreateOrConnectWithoutTastesInput
+    upsert?: CardUpsertWithoutTastesInput
+    connect?: CardWhereUniqueInput
+    update?: XOR<XOR<CardUpdateToOneWithWhereWithoutTastesInput, CardUpdateWithoutTastesInput>, CardUncheckedUpdateWithoutTastesInput>
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -4113,20 +3880,6 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedStringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
-  }
-
   export type NestedDateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -4136,17 +3889,6 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
-  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
@@ -4193,34 +3935,6 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
-  }
-
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
-  }
-
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -4233,20 +3947,6 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedDateTimeFilter<$PrismaModel>
     _max?: NestedDateTimeFilter<$PrismaModel>
-  }
-
-  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
   }
 
   export type NestedBoolFilter<$PrismaModel = never> = {
@@ -4262,168 +3962,134 @@ export namespace Prisma {
     _max?: NestedBoolFilter<$PrismaModel>
   }
 
-  export type TastesCreateWithoutCardInput = {
+  export type TasteCreateWithoutCardInput = {
     title: string
+    isMandatory?: boolean
     isPrivate?: boolean
     value: string
   }
 
-  export type TastesUncheckedCreateWithoutCardInput = {
+  export type TasteUncheckedCreateWithoutCardInput = {
     id?: number
     title: string
+    isMandatory?: boolean
     isPrivate?: boolean
     value: string
   }
 
-  export type TastesCreateOrConnectWithoutCardInput = {
-    where: TastesWhereUniqueInput
-    create: XOR<TastesCreateWithoutCardInput, TastesUncheckedCreateWithoutCardInput>
+  export type TasteCreateOrConnectWithoutCardInput = {
+    where: TasteWhereUniqueInput
+    create: XOR<TasteCreateWithoutCardInput, TasteUncheckedCreateWithoutCardInput>
   }
 
-  export type TastesUpsertWithWhereUniqueWithoutCardInput = {
-    where: TastesWhereUniqueInput
-    update: XOR<TastesUpdateWithoutCardInput, TastesUncheckedUpdateWithoutCardInput>
-    create: XOR<TastesCreateWithoutCardInput, TastesUncheckedCreateWithoutCardInput>
+  export type TasteCreateManyCardInputEnvelope = {
+    data: TasteCreateManyCardInput | TasteCreateManyCardInput[]
+    skipDuplicates?: boolean
   }
 
-  export type TastesUpdateWithWhereUniqueWithoutCardInput = {
-    where: TastesWhereUniqueInput
-    data: XOR<TastesUpdateWithoutCardInput, TastesUncheckedUpdateWithoutCardInput>
+  export type TasteUpsertWithWhereUniqueWithoutCardInput = {
+    where: TasteWhereUniqueInput
+    update: XOR<TasteUpdateWithoutCardInput, TasteUncheckedUpdateWithoutCardInput>
+    create: XOR<TasteCreateWithoutCardInput, TasteUncheckedCreateWithoutCardInput>
   }
 
-  export type TastesUpdateManyWithWhereWithoutCardInput = {
-    where: TastesScalarWhereInput
-    data: XOR<TastesUpdateManyMutationInput, TastesUncheckedUpdateManyWithoutCardInput>
+  export type TasteUpdateWithWhereUniqueWithoutCardInput = {
+    where: TasteWhereUniqueInput
+    data: XOR<TasteUpdateWithoutCardInput, TasteUncheckedUpdateWithoutCardInput>
   }
 
-  export type TastesScalarWhereInput = {
-    AND?: TastesScalarWhereInput | TastesScalarWhereInput[]
-    OR?: TastesScalarWhereInput[]
-    NOT?: TastesScalarWhereInput | TastesScalarWhereInput[]
-    id?: IntFilter<"Tastes"> | number
-    title?: StringFilter<"Tastes"> | string
-    isPrivate?: BoolFilter<"Tastes"> | boolean
-    value?: StringFilter<"Tastes"> | string
+  export type TasteUpdateManyWithWhereWithoutCardInput = {
+    where: TasteScalarWhereInput
+    data: XOR<TasteUpdateManyMutationInput, TasteUncheckedUpdateManyWithoutCardInput>
   }
 
-  export type CardCreateWithoutColumnInput = {
+  export type TasteScalarWhereInput = {
+    AND?: TasteScalarWhereInput | TasteScalarWhereInput[]
+    OR?: TasteScalarWhereInput[]
+    NOT?: TasteScalarWhereInput | TasteScalarWhereInput[]
+    id?: IntFilter<"Taste"> | number
+    title?: StringFilter<"Taste"> | string
+    isMandatory?: BoolFilter<"Taste"> | boolean
+    isPrivate?: BoolFilter<"Taste"> | boolean
+    value?: StringFilter<"Taste"> | string
+    cardId?: IntFilter<"Taste"> | number
+  }
+
+  export type CardCreateWithoutTastesInput = {
     username: string
-    name?: string | null
     password: string
-    country?: string | null
-    email?: string | null
-    number?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    birthdate?: Date | string | null
   }
 
-  export type CardUncheckedCreateWithoutColumnInput = {
+  export type CardUncheckedCreateWithoutTastesInput = {
     id?: number
     username: string
-    name?: string | null
     password: string
-    country?: string | null
-    email?: string | null
-    number?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
-    birthdate?: Date | string | null
   }
 
-  export type CardCreateOrConnectWithoutColumnInput = {
+  export type CardCreateOrConnectWithoutTastesInput = {
     where: CardWhereUniqueInput
-    create: XOR<CardCreateWithoutColumnInput, CardUncheckedCreateWithoutColumnInput>
+    create: XOR<CardCreateWithoutTastesInput, CardUncheckedCreateWithoutTastesInput>
   }
 
-  export type CardUpsertWithWhereUniqueWithoutColumnInput = {
-    where: CardWhereUniqueInput
-    update: XOR<CardUpdateWithoutColumnInput, CardUncheckedUpdateWithoutColumnInput>
-    create: XOR<CardCreateWithoutColumnInput, CardUncheckedCreateWithoutColumnInput>
+  export type CardUpsertWithoutTastesInput = {
+    update: XOR<CardUpdateWithoutTastesInput, CardUncheckedUpdateWithoutTastesInput>
+    create: XOR<CardCreateWithoutTastesInput, CardUncheckedCreateWithoutTastesInput>
+    where?: CardWhereInput
   }
 
-  export type CardUpdateWithWhereUniqueWithoutColumnInput = {
-    where: CardWhereUniqueInput
-    data: XOR<CardUpdateWithoutColumnInput, CardUncheckedUpdateWithoutColumnInput>
+  export type CardUpdateToOneWithWhereWithoutTastesInput = {
+    where?: CardWhereInput
+    data: XOR<CardUpdateWithoutTastesInput, CardUncheckedUpdateWithoutTastesInput>
   }
 
-  export type CardUpdateManyWithWhereWithoutColumnInput = {
-    where: CardScalarWhereInput
-    data: XOR<CardUpdateManyMutationInput, CardUncheckedUpdateManyWithoutColumnInput>
+  export type CardUpdateWithoutTastesInput = {
+    username?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type CardScalarWhereInput = {
-    AND?: CardScalarWhereInput | CardScalarWhereInput[]
-    OR?: CardScalarWhereInput[]
-    NOT?: CardScalarWhereInput | CardScalarWhereInput[]
-    id?: IntFilter<"Card"> | number
-    username?: StringFilter<"Card"> | string
-    name?: StringNullableFilter<"Card"> | string | null
-    password?: StringFilter<"Card"> | string
-    country?: StringNullableFilter<"Card"> | string | null
-    email?: StringNullableFilter<"Card"> | string | null
-    number?: StringNullableFilter<"Card"> | string | null
-    createdAt?: DateTimeFilter<"Card"> | Date | string
-    updatedAt?: DateTimeFilter<"Card"> | Date | string
-    birthdate?: DateTimeNullableFilter<"Card"> | Date | string | null
+  export type CardUncheckedUpdateWithoutTastesInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    username?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type TastesUpdateWithoutCardInput = {
+  export type TasteCreateManyCardInput = {
+    id?: number
+    title: string
+    isMandatory?: boolean
+    isPrivate?: boolean
+    value: string
+  }
+
+  export type TasteUpdateWithoutCardInput = {
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
   }
 
-  export type TastesUncheckedUpdateWithoutCardInput = {
+  export type TasteUncheckedUpdateWithoutCardInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
   }
 
-  export type TastesUncheckedUpdateManyWithoutCardInput = {
+  export type TasteUncheckedUpdateManyWithoutCardInput = {
     id?: IntFieldUpdateOperationsInput | number
     title?: StringFieldUpdateOperationsInput | string
+    isMandatory?: BoolFieldUpdateOperationsInput | boolean
     isPrivate?: BoolFieldUpdateOperationsInput | boolean
     value?: StringFieldUpdateOperationsInput | string
-  }
-
-  export type CardUpdateWithoutColumnInput = {
-    username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
-    password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  }
-
-  export type CardUncheckedUpdateWithoutColumnInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
-    password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
-  }
-
-  export type CardUncheckedUpdateManyWithoutColumnInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    username?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
-    password?: StringFieldUpdateOperationsInput | string
-    country?: NullableStringFieldUpdateOperationsInput | string | null
-    email?: NullableStringFieldUpdateOperationsInput | string | null
-    number?: NullableStringFieldUpdateOperationsInput | string | null
-    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    birthdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   }
 
 

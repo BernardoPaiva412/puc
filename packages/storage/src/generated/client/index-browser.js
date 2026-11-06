@@ -123,21 +123,18 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
 exports.Prisma.CardScalarFieldEnum = {
   id: 'id',
   username: 'username',
-  name: 'name',
   password: 'password',
-  country: 'country',
-  email: 'email',
-  number: 'number',
   createdAt: 'createdAt',
-  updatedAt: 'updatedAt',
-  birthdate: 'birthdate'
+  updatedAt: 'updatedAt'
 };
 
-exports.Prisma.TastesScalarFieldEnum = {
+exports.Prisma.TasteScalarFieldEnum = {
   id: 'id',
   title: 'title',
+  isMandatory: 'isMandatory',
   isPrivate: 'isPrivate',
-  value: 'value'
+  value: 'value',
+  cardId: 'cardId'
 };
 
 exports.Prisma.SortOrder = {
@@ -150,15 +147,10 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
-exports.Prisma.NullsOrder = {
-  first: 'first',
-  last: 'last'
-};
-
 
 exports.Prisma.ModelName = {
   Card: 'Card',
-  Tastes: 'Tastes'
+  Taste: 'Taste'
 };
 
 /**

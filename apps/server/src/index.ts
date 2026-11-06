@@ -50,7 +50,11 @@ app.post('/identification', async (req: Request, res: Response): Promise<any> =>
     try {
         const card = await prisma.card.findUnique({ where: { username } })
 
-        const isPasswordCorrect = await bcrypt.compare(password, username.password)
+        if (!card) {
+            return res.status(404).json({ error: 'User not found.' })
+        }
+
+        const isPasswordCorrect = await bcrypt.compare(password, card.password)
 
         if (!isPasswordCorrect) {
             return res.status(400).json({ error: 'Incorret password. This isn\'t you, is it?' })
@@ -63,9 +67,20 @@ app.post('/identification', async (req: Request, res: Response): Promise<any> =>
 })
 
 app.get('/status', async (req: Request, res: Response) => {
-    return res.status(200).json({
-        status: "'OK!' from TypeScript.",
-        dBSystem_conected: !!prisma
+    let isDBConnected = false
+
+    try {
+        await prisma.$queryRaw`SELECT 1`
+        isDBConnected = true
+    } catch (error) {
+        isDBConnected = false
+    }
+    
+    return res.status(isDBConnected ? 200 : 500).json({
+        status: isDBConnected ? '"OK!" from TypeScript.' : '"Internal Error!" from TypeScript.',
+        dBSystem_connected: isDBConnected,
+        caller_ip: req.ip,
+        timestamp: new Date().toISOString()
     })
 })
 

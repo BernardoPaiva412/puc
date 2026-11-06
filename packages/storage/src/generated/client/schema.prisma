@@ -9,23 +9,20 @@ datasource db {
 }
 
 model Card {
-  id        Int       @id @default(autoincrement())
-  username  String    @unique
-  name      String?
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
   password  String
-  country   String?
-  email     String?
-  number    String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  birthdate DateTime?
-  column    Tastes[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tastes    Taste[]
 }
 
-model Tastes {
-  id        Int     @id @default(autoincrement())
-  title     String
-  isPrivate Boolean @default(false)
-  value     String
-  card      Card[]
+model Taste {
+  id          Int     @id @default(autoincrement())
+  title       String
+  isMandatory Boolean @default(false)
+  isPrivate   Boolean @default(false)
+  value       String
+  cardId      Int
+  card        Card    @relation(fields: [cardId], references: [id])
 }
