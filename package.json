@@ -1,14 +1,18 @@
 {
   "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
     "@types/node": "^26.6.6",
-    "concurrently": "^10.0.6"
+    "concurrently": "^10.0.6",
+    "husky": "^8.0.0"
   },
   "scripts": {
     "generate": "npm run generate -w @puc/storage",
     "migrate": "npm run migrate -w @puc/storage",
     "client-dev": "npm run dev -w client",
     "server-dev": "npm run dev -w @puc/server",
-    "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\""
+    "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
+    "prepare": "husky install"
   },
   "name": "puc",
   "workspaces": [
