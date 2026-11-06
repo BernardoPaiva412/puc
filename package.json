@@ -12,7 +12,8 @@
     "client-dev": "npm run dev -w client",
     "server-dev": "npm run dev -w @puc/server",
     "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "name": "puc",
   "workspaces": [
