@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 
 import { prisma } from '@puc/storage';
 
-import bcrypt from 'bcrypt'
+import bcryptjs from 'bcryptjs'
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.post('/register', async (req: Request, res: Response): Promise<any> => {
 
         const saltRounds = 10
 
-        const hashedPassword = await bcrypt.hash(password, saltRounds)
+        const hashedPassword = await bcryptjs.hash(password, saltRounds)
 
         const newCard = await prisma.card.create({
             data: {
@@ -54,7 +54,7 @@ app.post('/identification', async (req: Request, res: Response): Promise<any> =>
             return res.status(404).json({ error: 'User not found.' })
         }
 
-        const isPasswordCorrect = await bcrypt.compare(password, card.password)
+        const isPasswordCorrect = await bcryptjs.compare(password, card.password)
 
         if (!isPasswordCorrect) {
             return res.status(400).json({ error: 'Incorret password. This isn\'t you, is it?' })
