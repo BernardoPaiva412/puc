@@ -4,7 +4,9 @@
   "main": "./src/index.js",
   "scripts": {
     "generate": "node --env-file=../../.env ../../node_modules/prisma/build/index.js generate",
-    "migrate": "node --env-file=../../.env ../../node_modules/prisma/build/index.js migrate dev"
+    "dev": "node --env-file=../../.env ../../node_modules/prisma/build/index.js migrate dev",
+    "reset": "node --env-file=../../.env ../../node_modules/prisma/build/index.js migrate dev",
+    "studio": "node --env-file=../../.env ../../node_modules/prisma/build/index.js studio"
   },
   "keywords": [],
   "author": "",
