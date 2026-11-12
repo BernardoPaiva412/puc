@@ -3542,7 +3542,7 @@ export namespace Prisma {
     title: string
     isMandatory?: boolean
     isPrivate?: boolean
-    value: string
+    value?: string
     card: CardCreateNestedOneWithoutTastesInput
   }
 
@@ -3551,7 +3551,7 @@ export namespace Prisma {
     title: string
     isMandatory?: boolean
     isPrivate?: boolean
-    value: string
+    value?: string
     cardId: number
   }
 
@@ -3577,7 +3577,7 @@ export namespace Prisma {
     title: string
     isMandatory?: boolean
     isPrivate?: boolean
-    value: string
+    value?: string
     cardId: number
   }
 
@@ -3966,7 +3966,7 @@ export namespace Prisma {
     title: string
     isMandatory?: boolean
     isPrivate?: boolean
-    value: string
+    value?: string
   }
 
   export type TasteUncheckedCreateWithoutCardInput = {
@@ -3974,7 +3974,7 @@ export namespace Prisma {
     title: string
     isMandatory?: boolean
     isPrivate?: boolean
-    value: string
+    value?: string
   }
 
   export type TasteCreateOrConnectWithoutCardInput = {
@@ -4066,7 +4066,7 @@ export namespace Prisma {
     title: string
     isMandatory?: boolean
     isPrivate?: boolean
-    value: string
+    value?: string
   }
 
   export type TasteUpdateWithoutCardInput = {

@@ -12,6 +12,7 @@
     "migrate-dev": "npm run dev -w @puc/storage",
     "migrate-reset": "npm run reset -w @puc/storage",
     "studio": "npm run studio -w @puc/storage",
+    "seed": "npm run seed -w @puc/storage",
     "client-dev": "npm run dev -w client",
     "server-dev": "npm run dev -w @puc/server",
     "dev": "concurrently \"npm run client-dev\" \"npm run server-dev\"",

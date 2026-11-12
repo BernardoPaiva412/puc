@@ -14,9 +14,9 @@ dreamProfession
 food
 color
 religion
+politicalIdeology
 dreamCountry
 birthdate
 number
-email
-country
+realCountry
 name

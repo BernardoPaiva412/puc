@@ -15,7 +15,7 @@ CREATE TABLE "Taste" (
     "title" TEXT NOT NULL,
     "isMandatory" BOOLEAN NOT NULL DEFAULT false,
     "isPrivate" BOOLEAN NOT NULL DEFAULT false,
-    "value" TEXT NOT NULL,
+    "value" TEXT NOT NULL DEFAULT '',
     "cardId" INTEGER NOT NULL,
 
     CONSTRAINT "Taste_pkey" PRIMARY KEY ("id")

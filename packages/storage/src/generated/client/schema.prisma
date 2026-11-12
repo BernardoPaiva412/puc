@@ -22,7 +22,7 @@ model Taste {
   title       String
   isMandatory Boolean @default(false)
   isPrivate   Boolean @default(false)
-  value       String
+  value       String  @default("")
   cardId      Int
   card        Card    @relation(fields: [cardId], references: [id])
 }

@@ -1,8 +1,12 @@
+import 'dotenv/config'
+
 import express, { Request, Response } from 'express';
 
 import { prisma } from '@puc/storage';
 
 import bcryptjs from 'bcryptjs'
+
+import dbupdate from '../../../packages/storage/prisma/seed'
 
 const app = express();
 
@@ -34,6 +38,8 @@ app.post('/register', async (req: Request, res: Response): Promise<any> => {
                 password: hashedPassword
             }
         })
+
+        dbupdate()
 
         return res.status(201).json({
             id: newCard.id,
